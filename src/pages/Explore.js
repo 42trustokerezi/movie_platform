@@ -4,6 +4,8 @@ import Search from "../components/Search";
 import MovieList from "../components/MovieList";
 import TrendingList from "../components/TrendingList";
 import Home from "../components/Home";
+import TvSeries from "../components/TvSeries";
+import { Routes, Route } from "react-router-dom";
 
 const Explore = () => {
   return (
@@ -15,8 +17,10 @@ const Explore = () => {
       <div className="content-wrapper col-span-9 w-[100%] h-full float-right">
         <div className="w-[95%] float-right">
           <Search />
-
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/tv" element={<TvSeries />} />
+          </Routes>
         </div>
       </div>
     </div>

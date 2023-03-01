@@ -4,7 +4,7 @@ import MovieCard from "./TrendingCard";
 
 const TrendingList = () => {
   const { data, error, isLoading } = useGetTrendingMoviesQuery();
-  console.log(data);
+
   try {
     return (
       <div className=" pt-3 pb-10 w-[900%] overflow-auto">

@@ -7,6 +7,7 @@ export const store = configureStore({
   reducer: {
     bookmark: bookmarkReducer,
     [moviesApi.reducerPath]: moviesApi.reducer,
+    [TvSeriesApi.reducerPath]: TvSeriesApi.reducer,
   },
 
   middleware: (getDefaultMiddleware) =>
