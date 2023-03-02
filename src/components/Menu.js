@@ -4,6 +4,7 @@ import WindowIcon from "@mui/icons-material/Window";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -21,14 +22,20 @@ const Menu = () => {
           sx={{ display: "block", margin: "20px auto", color: "white" }}
           fontSize="small"
         />
-        <TheatersIcon
-          sx={{ display: "block", margin: "20px auto", color: "#566386" }}
-          fontSize="small"
-        />
-        <LiveTvIcon
-          sx={{ display: "block", margin: "20px auto", color: "#566386" }}
-          fontSize="small"
-        />
+        <Link to={`/movies`}>
+          <TheatersIcon
+            sx={{ display: "block", margin: "20px auto", color: "#566386" }}
+            fontSize="small"
+          />
+        </Link>
+
+        <Link to={"/tv"}>
+          <LiveTvIcon
+            sx={{ display: "block", margin: "20px auto", color: "#566386" }}
+            fontSize="small"
+          />
+        </Link>
+
         <BookmarkIcon
           sx={{ display: "block", margin: "20px auto", color: "#566386" }}
           fontSize="small"
