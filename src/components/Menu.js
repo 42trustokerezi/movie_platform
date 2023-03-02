@@ -6,6 +6,8 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import { Link } from "react-router-dom";
 
+import "../globalStyles.css";
+
 const Menu = () => {
   return (
     <div className="w-full rounded-md h-screen bg-[#161d2e] ">
@@ -18,28 +20,42 @@ const Menu = () => {
             color: "#fe4746",
           }}
         />
-        <WindowIcon
-          sx={{ display: "block", margin: "20px auto", color: "white" }}
-          fontSize="small"
-        />
+
+        <Link to={"/"}>
+          <div className="menu" data-tooltip="Home">
+            <WindowIcon
+              sx={{ display: "block", margin: "20px auto", color: "white" }}
+              fontSize="small"
+            />
+          </div>
+        </Link>
+
         <Link to={`/movies`}>
-          <TheatersIcon
-            sx={{ display: "block", margin: "20px auto", color: "#566386" }}
-            fontSize="small"
-          />
+          <div className="menu" data-tooltip="Movies">
+            <TheatersIcon
+              sx={{ display: "block", margin: "20px auto", color: "#566386" }}
+              fontSize="small"
+            />
+          </div>
         </Link>
 
         <Link to={"/tv"}>
-          <LiveTvIcon
-            sx={{ display: "block", margin: "20px auto", color: "#566386" }}
-            fontSize="small"
-          />
+          <div className="menu" data-tooltip="Tv series">
+            <LiveTvIcon
+              sx={{ display: "block", margin: "20px auto", color: "#566386" }}
+              fontSize="small"
+            />
+          </div>
         </Link>
 
-        <BookmarkIcon
-          sx={{ display: "block", margin: "20px auto", color: "#566386" }}
-          fontSize="small"
-        />
+        <Link>
+          <div className="menu" data-tooltip="Bookmarks">
+            <BookmarkIcon
+              sx={{ display: "block", margin: "20px auto", color: "#566386" }}
+              fontSize="small"
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,0 +1,45 @@
+.menu {
+  position: relative;
+}
+.menu::before,
+.menu::after {
+  --scale: 0;
+  --arrow-size: 0.5rem;
+  --tooltip-color: grey;
+
+  position: absolute;
+  top: -0.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0))
+    scale(var(--scale));
+  transition: 130ms transform;
+  transform-origin: bottom center;
+}
+
+.menu::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  color: white;
+  font-size: 10px;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  width: max-content;
+  /*max-width: 100%;*/
+  background: var(--tooltip-color);
+}
+
+.menu:hover::before,
+.menu:hover::after {
+  --scale: 1;
+}
+
+.menu::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: "";
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
+}
