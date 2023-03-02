@@ -1,6 +1,5 @@
 import React from "react";
 import Bookmark from "./Bookmark";
-import canvas from "../assets/canvas.jpeg";
 
 const MovieCard = ({ title, v_a, poster, release_date }) => {
   return (

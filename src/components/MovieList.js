@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import { useGetPopularMoviesQuery } from "../services/movies";
 
 const MovieList = () => {
-  const { data, error, isLoading } = useGetPopularMoviesQuery();
+  const { data } = useGetPopularMoviesQuery();
   console.log(data);
 
   return (

@@ -1,10 +1,9 @@
 import React from "react";
 import Menu from "../components/Menu";
 import Search from "../components/Search";
-import MovieList from "../components/MovieList";
-import TrendingList from "../components/TrendingList";
 import Home from "../components/Home";
 import TvSeries from "../components/TvSeries";
+import Movies from "../components/Movies";
 import { Routes, Route } from "react-router-dom";
 
 const Explore = () => {
@@ -20,6 +19,7 @@ const Explore = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tv" element={<TvSeries />} />
+            <Route path="/movies" element={<Movies />} />
           </Routes>
         </div>
       </div>
